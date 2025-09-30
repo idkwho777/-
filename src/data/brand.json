@@ -1,0 +1,32 @@
+{
+  "name": "دار البخور",
+  "tagline": "عبقٌ يبدأ من الدار",
+  "description": "متجر البخور العربي الأصيل - أجود أنواع البخور والعود والمسك",
+  "logo": "/logo.png",
+  "contact": {
+    "phone": "+965 60744844",
+    "whatsapp": "+965 60744844",
+    "email": "info@daaralbkhor.com",
+    "ordersEmail": "orders@daaralbkhor.com"
+  },
+  "social": {
+    "instagram": "https://instagram.com/daaralbkhoor",
+    "snapchat": "https://snapchat.com/add/daaralbkhor",
+    "facebook": "https://facebook.com/daaralbkhor",
+    "twitter": "https://twitter.com/daaralbkhor"
+  },
+  "address": {
+    "street": "شارع الخليج العربي",
+    "city": "الكويت",
+    "country": "دولة الكويت"
+  },
+  "workingHours": {
+    "saturday": "9:00 ص - 11:00 م",
+    "sunday": "9:00 ص - 11:00 م",
+    "monday": "9:00 ص - 11:00 م",
+    "tuesday": "9:00 ص - 11:00 م",
+    "wednesday": "9:00 ص - 11:00 م",
+    "thursday": "9:00 ص - 11:00 م",
+    "friday": "2:00 م - 11:00 م"
+  }
+}

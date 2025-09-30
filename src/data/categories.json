@@ -1,0 +1,56 @@
+[
+  {
+    "id": "oud",
+    "name": "العود",
+    "nameEn": "Oud",
+    "description": "أجود أنواع العود الأصيل من مختلف المناطق",
+    "slug": "oud",
+    "image": "/seed/oud-category.svg",
+    "icon": "🌳"
+  },
+  {
+    "id": "bukhoor",
+    "name": "البخور",
+    "nameEn": "Bukhoor",
+    "description": "مزيج عطري من البخور التقليدي",
+    "slug": "bukhoor",
+    "image": "/seed/bukhoor-category.svg",
+    "icon": "🔥"
+  },
+  {
+    "id": "musk",
+    "name": "المسك",
+    "nameEn": "Musk",
+    "description": "المسك الطبيعي الأصيل",
+    "slug": "musk",
+    "image": "/seed/musk-category.svg",
+    "icon": "🦌"
+  },
+  {
+    "id": "amber",
+    "name": "الambar",
+    "nameEn": "Amber",
+    "description": "العنبر الأصيل من البحر",
+    "slug": "amber",
+    "image": "/seed/amber-category.svg",
+    "icon": "🟡"
+  },
+  {
+    "id": "rose",
+    "name": "الورد",
+    "nameEn": "Rose",
+    "description": "مستخلصات الورد الطبيعي",
+    "slug": "rose",
+    "image": "/seed/rose-category.svg",
+    "icon": "🌹"
+  },
+  {
+    "id": "sandalwood",
+    "name": "الصندل",
+    "nameEn": "Sandalwood",
+    "description": "خشب الصندل العطري",
+    "slug": "sandalwood",
+    "image": "/seed/sandalwood-category.svg",
+    "icon": "🌿"
+  }
+]

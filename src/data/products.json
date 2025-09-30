@@ -1,0 +1,212 @@
+[
+  {
+    "id": "bk001",
+    "name": "عود كمبودي أصيل",
+    "nameEn": "Cambodian Oud",
+    "description": "عود كمبودي أصيل من أجود الأنواع، يتميز برائحته العطرة الفريدة",
+    "longDescription": "هذا العود الكمبودي الأصيل يتميز بجودته العالية ورائحته المميزة التي تدوم لساعات طويلة. يتم استخراجه من أشجار العود النادرة في كمبوديا ويخضع لعمليات معالجة دقيقة للحفاظ على جودته.",
+    "slug": "cambodian-oud",
+    "category": "oud",
+    "price": 150.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk1.svg",
+      "/seed/bk2.svg",
+      "/seed/bk3.svg"
+    ],
+    "mainImage": "/seed/bk1.svg",
+    "inStock": true,
+    "featured": true,
+    "tags": ["عود", "كمبودي", "أصيل", "عطري"],
+    "options": [
+      {
+        "name": "الحجم",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "small", "label": "صغير (5 جرام)", "price": 0 },
+          { "value": "medium", "label": "متوسط (10 جرام)", "price": 50 },
+          { "value": "large", "label": "كبير (20 جرام)", "price": 100 }
+        ]
+      }
+    ],
+    "rating": 4.8,
+    "reviews": 24,
+    "weight": "5-20 جرام",
+    "origin": "كمبوديا"
+  },
+  {
+    "id": "bk002",
+    "name": "بخور عربي تقليدي",
+    "nameEn": "Traditional Arabic Bukhoor",
+    "description": "مزيج عطري تقليدي من البخور العربي الأصيل",
+    "longDescription": "مزيج عطري تقليدي يجمع بين أفضل أنواع البخور العربي مع إضافات عطرية طبيعية. يتميز برائحته الدافئة والمريحة التي تملأ المكان بالعبق الأصيل.",
+    "slug": "traditional-arabic-bukhoor",
+    "category": "bukhoor",
+    "price": 25.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk4.svg",
+      "/seed/bk5.svg"
+    ],
+    "mainImage": "/seed/bk4.svg",
+    "inStock": true,
+    "featured": true,
+    "tags": ["بخور", "عربي", "تقليدي", "عطري"],
+    "options": [
+      {
+        "name": "الكمية",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "50g", "label": "50 جرام", "price": 0 },
+          { "value": "100g", "label": "100 جرام", "price": 15 },
+          { "value": "250g", "label": "250 جرام", "price": 35 }
+        ]
+      }
+    ],
+    "rating": 4.6,
+    "reviews": 18,
+    "weight": "50-250 جرام",
+    "origin": "الإمارات العربية المتحدة"
+  },
+  {
+    "id": "bk003",
+    "name": "مسك طبيعي أصيل",
+    "nameEn": "Natural Musk",
+    "description": "مسك طبيعي أصيل من أفضل المصادر",
+    "longDescription": "مسك طبيعي أصيل يتم استخراجه من مصادر طبيعية معتمدة. يتميز برائحته القوية والثابتة التي تدوم لساعات طويلة. مناسب للاستخدام اليومي والمناسبات الخاصة.",
+    "slug": "natural-musk",
+    "category": "musk",
+    "price": 200.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk6.svg",
+      "/seed/bk7.svg"
+    ],
+    "mainImage": "/seed/bk6.svg",
+    "inStock": true,
+    "featured": true,
+    "tags": ["مسك", "طبيعي", "أصيل", "عطري"],
+    "options": [
+      {
+        "name": "النقاء",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "standard", "label": "عادي", "price": 0 },
+          { "value": "premium", "label": "مميز", "price": 50 },
+          { "value": "ultra", "label": "فائق النقاء", "price": 100 }
+        ]
+      }
+    ],
+    "rating": 4.9,
+    "reviews": 31,
+    "weight": "3-10 جرام",
+    "origin": "التبت"
+  },
+  {
+    "id": "bk004",
+    "name": "عنبر بحري أصيل",
+    "nameEn": "Marine Amber",
+    "description": "عنبر بحري أصيل من أعماق المحيط",
+    "longDescription": "عنبر بحري أصيل يتم جمعه من شواطئ المحيطات. يتميز برائحته البحرية المميزة وقدرته على إعطاء رائحة عطرة تدوم طويلاً. مثالي للاستخدام في المناسبات الخاصة.",
+    "slug": "marine-amber",
+    "category": "amber",
+    "price": 75.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk8.svg",
+      "/seed/bk9.svg"
+    ],
+    "mainImage": "/seed/bk8.svg",
+    "inStock": true,
+    "featured": false,
+    "tags": ["عنبر", "بحري", "أصيل", "عطري"],
+    "options": [
+      {
+        "name": "الحجم",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "small", "label": "صغير", "price": 0 },
+          { "value": "medium", "label": "متوسط", "price": 25 },
+          { "value": "large", "label": "كبير", "price": 50 }
+        ]
+      }
+    ],
+    "rating": 4.5,
+    "reviews": 12,
+    "weight": "10-50 جرام",
+    "origin": "البحر البلطيقي"
+  },
+  {
+    "id": "bk005",
+    "name": "مستخلص ورد طبيعي",
+    "nameEn": "Natural Rose Extract",
+    "description": "مستخلص ورد طبيعي من أجود الأنواع",
+    "longDescription": "مستخلص ورد طبيعي يتم استخراجه من أجود أنواع الورد. يتميز برائحته العطرة والرومانسية التي تملأ المكان بالعبق الجميل. مناسب للاستخدام اليومي والمناسبات الخاصة.",
+    "slug": "natural-rose-extract",
+    "category": "rose",
+    "price": 45.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk10.svg",
+      "/seed/bk11.svg"
+    ],
+    "mainImage": "/seed/bk10.svg",
+    "inStock": true,
+    "featured": true,
+    "tags": ["ورد", "طبيعي", "مستخلص", "عطري"],
+    "options": [
+      {
+        "name": "التركيز",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "light", "label": "خفيف", "price": 0 },
+          { "value": "medium", "label": "متوسط", "price": 10 },
+          { "value": "strong", "label": "قوي", "price": 20 }
+        ]
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 22,
+    "weight": "30-100 مل",
+    "origin": "بلغاريا"
+  },
+  {
+    "id": "bk006",
+    "name": "خشب صندل هندي",
+    "nameEn": "Indian Sandalwood",
+    "description": "خشب صندل هندي أصيل من أجود الأنواع",
+    "longDescription": "خشب صندل هندي أصيل يتم استخراجه من أشجار الصندل النادرة في الهند. يتميز برائحته الدافئة والمهدئة التي تساعد على الاسترخاء. مثالي للاستخدام في المساء.",
+    "slug": "indian-sandalwood",
+    "category": "sandalwood",
+    "price": 60.000,
+    "currency": "KWD",
+    "images": [
+      "/seed/bk12.svg"
+    ],
+    "mainImage": "/seed/bk12.svg",
+    "inStock": true,
+    "featured": false,
+    "tags": ["صندل", "هندي", "أصيل", "عطري"],
+    "options": [
+      {
+        "name": "النوع",
+        "type": "select",
+        "required": true,
+        "values": [
+          { "value": "chips", "label": "قطع", "price": 0 },
+          { "value": "powder", "label": "مسحوق", "price": 5 },
+          { "value": "oil", "label": "زيت", "price": 15 }
+        ]
+      }
+    ],
+    "rating": 4.4,
+    "reviews": 16,
+    "weight": "20-100 جرام",
+    "origin": "الهند"
+  }
+]
