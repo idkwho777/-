@@ -165,9 +165,9 @@ export default function Home() {
                 key={category.id}
                 category={{
                   id: category.id,
-                  name: category.name_ar,
-                  nameEn: category.name_en,
-                  description: category.description_ar,
+                  name: category.name,
+                  nameEn: category.nameEn,
+                  description: category.description,
                   image: category.image,
                   icon: category.icon,
                 }}

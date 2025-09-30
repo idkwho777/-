@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { Navbar, Footer, WhatsAppButton, RequestOrderModal } from "@/components";
-import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ShoppingCart, Heart, Share2, Truck, Shield, RotateCcw } from "lucide-react";
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
@@ -44,10 +44,10 @@ interface Product {
 
 interface Category {
   id: string;
-  name_ar: string;
-  name_en: string;
-  description_ar: string;
-  description_en: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  slug: string;
   image: string;
   icon: string;
 }
@@ -78,7 +78,7 @@ export default function ProductDetailPage() {
               عذراً، لم نتمكن من العثور على المنتج المطلوب
             </p>
             <Button asChild>
-              <a href="/products">العودة إلى المنتجات</a>
+              <Link href="/products">العودة إلى المنتجات</Link>
             </Button>
           </div>
         </div>
@@ -131,26 +131,26 @@ export default function ProductDetailPage() {
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 space-x-reverse text-sm">
-            <a href="/" className="text-brand-primary hover:text-brand-primary/80">
+            <Link href="/" className="text-brand-primary hover:text-brand-primary/80">
               الرئيسية
-            </a>
+            </Link>
             <span className="text-gray-400">/</span>
-            <a href="/products" className="text-brand-primary hover:text-brand-primary/80">
+            <Link href="/products" className="text-brand-primary hover:text-brand-primary/80">
               المنتجات
-            </a>
+            </Link>
             <span className="text-gray-400">/</span>
             {category && (
               <>
-                <a 
+                <Link 
                   href={`/products?category=${category.id}`} 
                   className="text-brand-primary hover:text-brand-primary/80"
                 >
-                  {category.name_ar}
-                </a>
+                  {category.name}
+                </Link>
                 <span className="text-gray-400">/</span>
               </>
             )}
-            <span className="text-gray-600">{product.name_ar}</span>
+            <span className="text-gray-600">{product.name}</span>
           </nav>
         </div>
       </div>
@@ -403,15 +403,8 @@ export default function ProductDetailPage() {
           name: product.name,
           price: currentPrice,
           currency: product.currency,
-          options: product.options?.map(opt => ({
-            name: opt.name,
-            type: opt.type,
-            choices: opt.values.map(choice => ({
-              label: choice.label,
-              value: choice.value,
-              price_modifier: choice.price
-            }))
-          }))
+          weight: product.specifications?.الوزن || "",
+          images: product.images,
         }}
       />
     </div>

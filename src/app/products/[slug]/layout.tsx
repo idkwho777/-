@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: product.name_ar,
-    description: product.description_ar,
+    title: product.name,
+    description: product.description,
     keywords: [
-      product.name_ar,
-      product.name_en,
-      ...(product.tags_ar || []),
+      product.name,
+      product.nameEn,
+      ...(product.tags || []),
       "بخور",
       "عود",
       "مسك",
@@ -31,15 +31,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "صندل"
     ],
     openGraph: {
-      title: `${product.name_ar} - دار البخور`,
-      description: product.description_ar,
-      type: "product",
+      title: `${product.name} - دار البخور`,
+      description: product.description,
+      type: "website",
       images: [
         {
           url: product.mainImage,
           width: 800,
           height: 600,
-          alt: product.name_ar,
+          alt: product.name,
         },
       ],
     },

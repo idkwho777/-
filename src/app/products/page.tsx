@@ -4,38 +4,39 @@ import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { Navbar, Footer, WhatsAppButton, ProductCard } from "@/components";
-import { Search, Filter, X, Star, ShoppingCart } from "lucide-react";
+import { Search, Filter, X } from "lucide-react";
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
 
 interface Product {
   id: string;
-  name_ar: string;
-  name_en: string;
+  name: string;
+  nameEn: string;
   slug: string;
   category: string;
-  description_ar: string;
-  description_en: string;
+  description: string;
+  longDescription?: string;
   images: string[];
+  mainImage: string;
   price: number;
   currency: string;
   rating: number;
-  reviews_count: number;
-  tags_ar: string[];
-  tags_en: string[];
-  is_featured: boolean;
-  specifications_ar: Record<string, string>;
-  specifications_en: Record<string, string>;
+  reviews: number;
+  tags: string[];
+  featured: boolean;
+  inStock: boolean;
+  weight?: string;
+  origin?: string;
+  specifications?: Record<string, string>;
 }
 
 interface Category {
   id: string;
-  name_ar: string;
-  name_en: string;
-  description_ar: string;
-  description_en: string;
+  name: string;
+  nameEn: string;
+  description: string;
+  slug: string;
   image: string;
   icon: string;
 }
@@ -49,12 +50,12 @@ export default function ProductsPage() {
 
   // Filter and search products
   const filteredProducts = useMemo(() => {
-    let filtered = productsData.filter((product: Product) => {
+    const filtered = productsData.filter((product: Product) => {
       const matchesSearch = 
-        (product.name_ar?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
-        (product.name_en?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
-        (product.description_ar?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
-        (product.tags_ar?.some(tag => tag?.toLowerCase().includes(searchTerm.toLowerCase())) || false);
+        (product.name?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
+        (product.nameEn?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
+        (product.description?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
+        (product.tags?.some(tag => tag?.toLowerCase().includes(searchTerm.toLowerCase())) || false);
 
       const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
       
@@ -75,11 +76,11 @@ export default function ProductsPage() {
         filtered.sort((a, b) => b.rating - a.rating);
         break;
       case "name":
-        filtered.sort((a, b) => a.name_ar.localeCompare(b.name_ar));
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
         break;
       case "featured":
       default:
-        filtered.sort((a, b) => (b.is_featured ? 1 : 0) - (a.is_featured ? 1 : 0));
+        filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
         break;
     }
 
@@ -179,7 +180,7 @@ export default function ProductsPage() {
                         onChange={(e) => setSelectedCategory(e.target.value)}
                         className="ml-2"
                       />
-                      <span className="text-sm">{category.name_ar}</span>
+                      <span className="text-sm">{category.name}</span>
                     </label>
                   ))}
                 </div>
@@ -238,7 +239,7 @@ export default function ProductsPage() {
                 </h2>
                 {selectedCategory !== "all" && (
                   <Badge variant="secondary" className="flex items-center gap-1">
-                    {categories.find(cat => cat.id === selectedCategory)?.name_ar}
+                    {categories.find(cat => cat.id === selectedCategory)?.name}
                     <X 
                       className="w-3 h-3 cursor-pointer" 
                       onClick={() => setSelectedCategory("all")}
@@ -247,7 +248,7 @@ export default function ProductsPage() {
                 )}
                 {searchTerm && (
                   <Badge variant="secondary" className="flex items-center gap-1">
-                    "{searchTerm}"
+                    &quot;{searchTerm}&quot;
                     <X 
                       className="w-3 h-3 cursor-pointer" 
                       onClick={() => setSearchTerm("")}
@@ -265,22 +266,22 @@ export default function ProductsPage() {
                     key={product.id}
                     product={{
                       id: product.id,
-                      name: product.name_ar,
-                      nameEn: product.name_en,
-                      description: product.description_ar,
+                      name: product.name,
+                      nameEn: product.nameEn,
+                      description: product.description,
                       slug: product.slug,
                       category: product.category,
                       price: product.price,
                       currency: product.currency,
                       images: product.images,
-                      mainImage: product.images[0],
-                      inStock: true,
-                      featured: product.is_featured,
-                      tags: product.tags_ar,
+                      mainImage: product.mainImage,
+                      inStock: product.inStock,
+                      featured: product.featured,
+                      tags: product.tags,
                       rating: product.rating,
-                      reviews: product.reviews_count,
-                      weight: product.specifications_ar?.الوزن || "",
-                      origin: product.specifications_ar?.المنشأ || "",
+                      reviews: product.reviews,
+                      weight: product.weight || "",
+                      origin: product.origin || "",
                     }}
                   />
                 ))}

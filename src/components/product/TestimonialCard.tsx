@@ -78,7 +78,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
 
         {/* Comment */}
         <p className="text-sm text-brand-text leading-relaxed">
-          "{testimonial.comment || "تعليق رائع على المنتج"}"
+          &quot;{testimonial.comment || "تعليق رائع على المنتج"}&quot;
         </p>
 
         {/* Product Reference */}
